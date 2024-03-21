@@ -22,6 +22,9 @@ export default {
       fontFamily: {
         logo: ["Madimi One", "sans-serif"],
       },
+      screens: {
+        s: "320px",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
