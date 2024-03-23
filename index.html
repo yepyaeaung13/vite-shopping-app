@@ -12,26 +12,26 @@
   <main id="app" class="min-h-screen flex flex-col">
     <!-- header section  -->
     <header id="header" class="sticky top-0 bg-zinc-200">
-      <div class="container flex flex-wrap justify-between mx-auto mb-3 mt-3">
+      <div class="container flex flex-wrap justify-between mx-auto sm:mb-3 s:mb-1 mt-3">
         <div class="flex gap-2">
           <a href="" class="-translate-y-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-              class="w-12 h-12 text-green-600 pointer-events-none">
+              class="sm:w-12 sm:h-12 s:w-10 s:h-10 text-green-600 pointer-events-none">
               <path fill-rule="evenodd"
                 d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"
                 clip-rule="evenodd" />
             </svg>
           </a>
-          <h1 class="text-2xl font-bold italic translate-y-2 font-logo">
+          <h1 class="sm:text-2xl s:text-lg font-bold italic translate-y-2 font-logo">
             Shopping
           </h1>
         </div>
         <!-- button group  -->
         <div>
           <button type="button"
-            class="text-zinc-700 border border-zinc-700 hover:bg-zinc-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:border-zinc-500 dark:text-zinc-500 dark:hover:text-white dark:focus:ring-zinc-800 dark:hover:bg-zinc-500">
+            class="text-zinc-700 border border-zinc-700 hover:bg-zinc-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm sm:p-2.5 s:p-1 text-center inline-flex items-center me-2 dark:border-zinc-500 dark:text-zinc-500 dark:hover:text-white dark:focus:ring-zinc-800 dark:hover:bg-zinc-500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
+              stroke="currentColor" class="sm:w-6 sm:h-6 s:w-5 s:h-5">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
@@ -40,9 +40,9 @@
           </button>
           <button type="button" data-drawer-target="cart-drawer" data-drawer-show="cart-drawer"
             data-drawer-placement="right" aria-controls="cart-drawer"
-            class="cart-btn text-white bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
+            class="cart-btn text-white bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm sm:p-2.5 s:p-1 text-center inline-flex items-center me-2 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
+              stroke="currentColor" class="sm:w-6 sm:h-6 s:w-5 s:h-5">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
             </svg>
@@ -54,7 +54,7 @@
     </header>
     <!-- drawer component -->
     <div id="cart-drawer"
-      class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+      class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white sm:w-80 s:w-60 dark:bg-gray-800"
       tabindex="2" aria-labelledby="drawer-right-label">
       <h5 id="drawer-right-label"
         class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
@@ -119,27 +119,28 @@
     <!-- product category section  -->
     <section>
       <div class="container mx-auto" id="productCategory">
-        <h1 class="text-xl mb-2 mt-2">Product Categories</h1>
+        <h1 class="sm:text-xl mb-2 mt-2">Product Categories</h1>
         <div class="flex overflow-x-scroll gap-1">
-          <p class="border border-zinc-500 px-3 py-1 bg-zinc-700 text-white cursor-pointer text-nowrap">
+          <p
+            class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] bg-zinc-700 text-white cursor-pointer text-nowrap">
             All
           </p>
-          <p class="border border-zinc-500 px-3 py-1 cursor-pointer text-nowrap">
+          <p class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] cursor-pointer text-nowrap">
             electronics
           </p>
-          <p class="border border-zinc-500 px-3 py-1 cursor-pointer text-nowrap">
+          <p class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] cursor-pointer text-nowrap">
             jewelery
           </p>
-          <p class="border border-zinc-500 px-3 py-1 cursor-pointer text-nowrap">
+          <p class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] cursor-pointer text-nowrap">
             man's clothing
           </p>
-          <p class="border border-zinc-500 px-3 py-1 cursor-pointer text-nowrap">
+          <p class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] cursor-pointer text-nowrap">
             women's clothing
           </p>
-          <p class="border border-zinc-500 px-3 py-1 cursor-pointer text-nowrap">
+          <p class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] cursor-pointer text-nowrap">
             Computer
           </p>
-          <p class="border border-zinc-500 px-3 py-1 cursor-pointer text-nowrap">
+          <p class="border border-zinc-500 px-3 py-1 sm:text-[0.9rem] s:text-[9px] cursor-pointer text-nowrap">
             Mobile Phone
           </p>
         </div>
@@ -150,155 +151,295 @@
       <div id="productGroup" class="container mx-auto flex items-center flex-wrap gap-5">
 
         <div
-          class="card lg:w-[25%] md:w-[30%] sm:w-[50%] s:w-[50%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="./src/img/dahua monitor.png" alt="product image" />
+          class="card lg:w-[22%] md:w-[30%] sm:w-[45%] s:w-[45%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#" class="flex justify-center">
+            <img class="rounded-t-lg sm:w-48 s:w-20" src="./src/img/dahua monitor.png" alt="product image" />
           </a>
-          <div class="px-5 pb-2">
+          <div class="px-3 pb-2">
             <a href="#">
-              <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h5
+                class="lg:text-sm sm:text-[12px] s:text-[9px] font-semibold tracking-tight text-gray-900 dark:text-white">
                 Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
               </h5>
             </a>
-            <div class="flex items-center mt-2.5 mb-5">
+            <div class="flex sm:flex-row items-center mt-2.5 mb-2">
               <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+
+
+                <svg class="w-4 h-4 s:w-2 s:h-2 text-gray-200 dark:text-gray-600" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
               </div>
               <span
-                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                class="bg-blue-100 text-blue-800 sm:text-xs s:text-[6px] font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-gray-900 dark:text-white">$599</span>
+            <div class="flex sm:flex-row items-center justify-between s:flex-col s:gap-2">
+              <span class="lg:text-lg sm:text-[15px] s:text-[12px] font-bold text-gray-900 dark:text-white">$599</span>
               <button href="#"
-                class="text-white bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="text-white md:text-[11px] sm:text-[14px] s:text-[9px] sm:w-[60%] s:w-full bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg lg:text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Add to cart
               </button>
             </div>
           </div>
         </div>
-
         <div
-          class="card lg:w-[25%] md:w-[30%] sm:w-[50%] s:w-[50%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="./src/img/dahua monitor.png" alt="product image" />
+          class="card lg:w-[22%] md:w-[30%] sm:w-[45%] s:w-[45%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#" class="flex justify-center">
+            <img class="rounded-t-lg sm:w-48 s:w-20" src="./src/img/dahua monitor.png" alt="product image" />
           </a>
-          <div class="px-5 pb-2">
+          <div class="px-3 pb-2">
             <a href="#">
-              <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h5
+                class="lg:text-sm sm:text-[12px] s:text-[9px] font-semibold tracking-tight text-gray-900 dark:text-white">
                 Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
               </h5>
             </a>
-            <div class="flex items-center mt-2.5 mb-5">
+            <div class="flex sm:flex-row items-center mt-2.5 mb-2">
               <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+
+
+                <svg class="w-4 h-4 s:w-2 s:h-2 text-gray-200 dark:text-gray-600" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
               </div>
               <span
-                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                class="bg-blue-100 text-blue-800 sm:text-xs s:text-[6px] font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-gray-900 dark:text-white">$599</span>
+            <div class="flex sm:flex-row items-center justify-between s:flex-col s:gap-2">
+              <span class="lg:text-lg sm:text-[15px] s:text-[12px] font-bold text-gray-900 dark:text-white">$599</span>
               <button href="#"
-                class="text-white bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="text-white md:text-[11px] sm:text-[14px] s:text-[9px] sm:w-[60%] s:w-full bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg lg:text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Add to cart
               </button>
             </div>
           </div>
         </div>
-
         <div
-          class="card lg:w-[25%] md:w-[30%] sm:w-[50%] s:w-[50%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="./src/img/dahua monitor.png" alt="product image" />
+          class="card lg:w-[22%] md:w-[30%] sm:w-[45%] s:w-[45%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#" class="flex justify-center">
+            <img class="rounded-t-lg sm:w-48 s:w-20" src="./src/img/dahua monitor.png" alt="product image" />
           </a>
-          <div class="px-5 pb-2">
+          <div class="px-3 pb-2">
             <a href="#">
-              <h5 class="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h5
+                class="lg:text-sm sm:text-[12px] s:text-[9px] font-semibold tracking-tight text-gray-900 dark:text-white">
                 Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
               </h5>
             </a>
-            <div class="flex items-center mt-2.5 mb-5">
+            <div class="flex sm:flex-row items-center mt-2.5 mb-2">
               <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor" viewBox="0 0 22 20">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
-                <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+
+
+                <svg class="w-4 h-4 s:w-2 s:h-2 text-gray-200 dark:text-gray-600" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                   <path
                     d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
               </div>
               <span
-                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+                class="bg-blue-100 text-blue-800 sm:text-xs s:text-[6px] font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-gray-900 dark:text-white">$599</span>
+            <div class="flex sm:flex-row items-center justify-between s:flex-col s:gap-2">
+              <span class="lg:text-lg sm:text-[15px] s:text-[12px] font-bold text-gray-900 dark:text-white">$599</span>
               <button href="#"
-                class="text-white bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="text-white md:text-[11px] sm:text-[14px] s:text-[9px] sm:w-[60%] s:w-full bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg lg:text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card lg:w-[22%] md:w-[30%] sm:w-[45%] s:w-[45%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#" class="flex justify-center">
+            <img class="rounded-t-lg sm:w-48 s:w-20" src="./src/img/dahua monitor.png" alt="product image" />
+          </a>
+          <div class="px-3 pb-2">
+            <a href="#">
+              <h5
+                class="lg:text-sm sm:text-[12px] s:text-[9px] font-semibold tracking-tight text-gray-900 dark:text-white">
+                Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+              </h5>
+            </a>
+            <div class="flex sm:flex-row items-center mt-2.5 mb-2">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+
+
+                <svg class="w-4 h-4 s:w-2 s:h-2 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+              </div>
+              <span
+                class="bg-blue-100 text-blue-800 sm:text-xs s:text-[6px] font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+            </div>
+            <div class="flex sm:flex-row items-center justify-between s:flex-col s:gap-2">
+              <span class="lg:text-lg sm:text-[15px] s:text-[12px] font-bold text-gray-900 dark:text-white">$599</span>
+              <button href="#"
+                class="text-white md:text-[11px] sm:text-[14px] s:text-[9px] sm:w-[60%] s:w-full bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg lg:text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card lg:w-[22%] md:w-[30%] sm:w-[45%] s:w-[45%] bg-white border border-gray-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#" class="flex justify-center">
+            <img class="rounded-t-lg sm:w-48 s:w-20" src="./src/img/dahua monitor.png" alt="product image" />
+          </a>
+          <div class="px-3 pb-2">
+            <a href="#">
+              <h5
+                class="lg:text-sm sm:text-[12px] s:text-[9px] font-semibold tracking-tight text-gray-900 dark:text-white">
+                Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+              </h5>
+            </a>
+            <div class="flex sm:flex-row items-center mt-2.5 mb-2">
+              <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+                <svg class="sm:w-4 sm:h-4 s:w-2 s:h-2 text-yellow-300" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+
+
+                <svg class="w-4 h-4 s:w-2 s:h-2 text-gray-200 dark:text-gray-600" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+              </div>
+              <span
+                class="bg-blue-100 text-blue-800 sm:text-xs s:text-[6px] font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+            </div>
+            <div class="flex sm:flex-row items-center justify-between s:flex-col s:gap-2">
+              <span class="lg:text-lg sm:text-[15px] s:text-[12px] font-bold text-gray-900 dark:text-white">$599</span>
+              <button href="#"
+                class="text-white md:text-[11px] sm:text-[14px] s:text-[9px] sm:w-[60%] s:w-full bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg lg:text-sm px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Add to cart
               </button>
             </div>
@@ -306,8 +447,8 @@
         </div>
 
         <!-- buttom  -->
-        <a href="#header"
-          class="text-white fixed right-28 translate-y-48 bg-zinc-700 border-zinc-700 hover:bg-zinc-900 hover:text-white font-medium rounded-lg text-sm text-center inline-flex items-center dark:border-zinc-500 dark:text-zinc-500 dark:hover:text-white dark:focus:ring-zinc-800 dark:hover:bg-zinc-500">
+        <a href="#productCategory"
+          class="text-white fixed right-[10%] bottom-[9%] bg-zinc-700 border-zinc-700 hover:bg-zinc-900 hover:text-white font-medium rounded-lg text-sm text-center inline-flex items-center dark:border-zinc-500 dark:text-zinc-500 dark:hover:text-white dark:focus:ring-zinc-800 dark:hover:bg-zinc-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-8 h-8">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -323,19 +464,19 @@
     <footer class="mt-auto bg-zinc-600 p-3">
       <div class="container flex justify-between mx-auto items-cente">
         <div class="flex gap-1 items-center">
-          <p class="text-white">Copyright @ 2024</p>
-          <a href="#" target="_blank" class="underline underline-offset-2 text-white">MMS IT</a>
+          <p class="text-white sm:text-lg s:text-xs">Copyright @ 2024</p>
+          <a href="#" target="_blank" class="underline underline-offset-2 text-white sm:text-lg s:text-xs">MMS IT</a>
         </div>
         <div class="flex items-center">
           <div class="flex gap-3">
-            <a href=""><i class="fa-brands fa-facebook text-2xl text-white"></i></a>
-            <a href=""><i class="fa-brands fa-instagram text-2xl text-white"></i>
+            <a href=""><i class="fa-brands fa-facebook sm:text-2xl s:text-xl text-white"></i></a>
+            <a href=""><i class="fa-brands fa-instagram sm:text-2xl text-white"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-twitter text-2xl text-white"></i>
+              <i class="fa-brands fa-twitter sm:text-2xl s:text-xl text-white"></i>
             </a>
             <a href="">
-              <i class="fa-brands fa-youtube text-2xl text-white"></i>
+              <i class="fa-brands fa-youtube sm:text-2xl s:text-xl text-white"></i>
             </a>
           </div>
         </div>
