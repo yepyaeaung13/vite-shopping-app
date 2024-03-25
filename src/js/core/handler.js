@@ -6,6 +6,7 @@ import {
   showProduct,
   subQty,
 } from "./cart.js";
+import { selectColor } from "./function.js";
 import products from "./products.js";
 import { cartCount, cartItemGroup, cartItemsCount } from "./selectors.js";
 
@@ -33,8 +34,10 @@ export const CartItemHandler = (event) => {
 export const categoryHandler = (event) => {
   if (event.target.classList.contains("product-category")) {
     showProduct(products, event);
+    selectColor(event);
   }
   if (event.target.classList.contains("all-product-category")) {
     productRender(products);
+    selectColor(event);
   }
 };

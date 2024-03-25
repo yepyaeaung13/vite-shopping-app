@@ -8,4 +8,4 @@ export const cartItemsCount = document.querySelector(".cart-items-count");
 export const cartItemTemplate = document.querySelector("#cartItemTemplate");
 export const cartItemGroup = document.querySelector("#cartItemGroup");
 export const cartTotalAmount = document.querySelector(".cart-total-amount");
-export const product_category = document.querySelector(".product-category");
+export const product_category = document.querySelectorAll(".product-category");
