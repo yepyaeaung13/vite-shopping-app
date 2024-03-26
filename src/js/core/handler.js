@@ -59,7 +59,8 @@ export const searchBoxHandler = (event) => {
   products
     .filter(
       (el) =>
-        el.title.includes(searchString) || el.description.includes(searchString)
+        el.title.toLowerCase().includes(searchString) ||
+        el.description.toLowerCase().includes(searchString)
     )
     .map((el) => productGroup.append(createCard(el)));
 };
