@@ -24,6 +24,10 @@ import {
 export const cartBtnHandler = (event) => {
   // cartCount.innerText = parseInt(cartCount.innerText) + 1;
   // cartItemsCount.innerText = parseInt(cartItemsCount.innerText) + 1;
+  cartBtn.classList.add("animate__headShake");
+  cartBtn.addEventListener("animationend", () => {
+    cartBtn.classList.remove("animate__headShake");
+  });
   const cardBtn = event.target.closest(".card-btn");
   cardBtn.innerText = "Added";
   cardBtn.disabled = true;
