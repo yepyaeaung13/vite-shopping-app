@@ -1,3 +1,4 @@
+import { showSearchBox } from "./function.js";
 import {
   CartItemHandler,
   cartBtnHandler,
