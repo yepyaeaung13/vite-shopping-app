@@ -74,8 +74,11 @@ export const cartItemDelete = (event) => {
       cardBtn.disabled = false;
     }
   });
+  cartItem.classList.add("animate__animated", "animate__backOutRight");
 
-  cartItem.remove();
+  cartItem.addEventListener("animationend", () => {
+    cartItem.remove();
+  });
 };
 
 export const addQty = (event) => {

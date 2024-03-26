@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import {
   addQty,
   cartItemDelete,
@@ -10,9 +11,11 @@ import {
 import { selectColor, showSearchBox } from "./function.js";
 import products from "./products.js";
 import {
+  cartBtn,
   cartCount,
   cartItemGroup,
   cartItemsCount,
+  cartTotalAmount,
   productCategory,
   productGroup,
   searchBox,
@@ -51,9 +54,6 @@ export const categoryHandler = (event) => {
 };
 
 export const searchBoxHandler = (event) => {
-  if (event.target.classList.contains("search-btn")) {
-    showSearchBox();
-  }
   productGroup.innerHTML = "";
   const searchString = event.target.value;
   products
@@ -63,4 +63,22 @@ export const searchBoxHandler = (event) => {
         el.description.toLowerCase().includes(searchString)
     )
     .map((el) => productGroup.append(createCard(el)));
+};
+
+export const orderHandler = (event) => {
+  if (cartTotalAmount.innerText > 0) {
+    Swal.fire({
+      title: "Order Success",
+      text: "Please wait for 3 days and we will deliver it to your home",
+      icon: "success",
+    });
+    cartItemGroup.innerHTML = "";
+    productRender(products);
+  } else {
+    Swal.fire({
+      title: "Cart is empty!",
+      text: "There are no items, please add to cart.",
+      icon: "warning",
+    });
+  }
 };

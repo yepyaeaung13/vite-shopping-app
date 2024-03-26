@@ -2,10 +2,12 @@ import {
   CartItemHandler,
   cartBtnHandler,
   categoryHandler,
+  orderHandler,
   searchBoxHandler,
 } from "./handler.js";
 import {
   cartItemGroup,
+  orderBtn,
   productCategory,
   productGroup,
   searchBox,
@@ -24,9 +26,14 @@ export const listener = () => {
     categoryHandler(event);
   });
   searchBoxContainer.addEventListener("click", (event) => {
-    searchBoxHandler(event);
+    if (event.target.classList.contains("search-btn")) {
+      showSearchBox();
+    }
   });
   searchBox.addEventListener("keyup", (event) => {
     searchBoxHandler(event);
+  });
+  orderBtn.addEventListener("click", (event) => {
+    orderHandler(event);
   });
 };

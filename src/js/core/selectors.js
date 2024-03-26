@@ -14,3 +14,4 @@ export const searchBtn = document.querySelector(".search-btn");
 export const searchBoxContainer = document.querySelector(
   ".search-box-container"
 );
+export const orderBtn = document.querySelector(".order-btn");
