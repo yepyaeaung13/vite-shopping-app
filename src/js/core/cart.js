@@ -8,7 +8,7 @@ import {
   productGroup,
 } from "./selectors.js";
 
-const createCard = (product) => {
+export const createCard = (product) => {
   const card = cardTemplate.content.cloneNode(true);
   card.querySelector(".card-img").src = product.image;
   card.querySelector(".card-title").innerText = product.title;

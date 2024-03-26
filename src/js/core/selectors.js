@@ -9,3 +9,8 @@ export const cartItemTemplate = document.querySelector("#cartItemTemplate");
 export const cartItemGroup = document.querySelector("#cartItemGroup");
 export const cartTotalAmount = document.querySelector(".cart-total-amount");
 export const product_category = document.querySelectorAll(".product-category");
+export const searchBox = document.querySelector(".search-box");
+export const searchBtn = document.querySelector(".search-btn");
+export const searchBoxContainer = document.querySelector(
+  ".search-box-container"
+);

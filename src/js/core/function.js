@@ -1,4 +1,4 @@
-import { product_category } from "./selectors";
+import { product_category, searchBox } from "./selectors";
 
 export const selectColor = (event) => {
   const selectEl = event.target;
@@ -10,4 +10,9 @@ export const selectColor = (event) => {
     }
   }
   selectEl.classList.add("selected", "bg-zinc-700", "text-white");
+};
+
+export const showSearchBox = () => {
+  searchBox.classList.toggle("hidden");
+  searchBox.focus();
 };

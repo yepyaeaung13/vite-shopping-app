@@ -1,14 +1,22 @@
 import {
   addQty,
   cartItemDelete,
+  createCard,
   createCartItems,
   productRender,
   showProduct,
   subQty,
 } from "./cart.js";
-import { selectColor } from "./function.js";
+import { selectColor, showSearchBox } from "./function.js";
 import products from "./products.js";
-import { cartCount, cartItemGroup, cartItemsCount } from "./selectors.js";
+import {
+  cartCount,
+  cartItemGroup,
+  cartItemsCount,
+  productCategory,
+  productGroup,
+  searchBox,
+} from "./selectors.js";
 
 export const cartBtnHandler = (event) => {
   // cartCount.innerText = parseInt(cartCount.innerText) + 1;
@@ -40,4 +48,18 @@ export const categoryHandler = (event) => {
     productRender(products);
     selectColor(event);
   }
+};
+
+export const searchBoxHandler = (event) => {
+  if (event.target.classList.contains("search-btn")) {
+    showSearchBox();
+  }
+  productGroup.innerHTML = "";
+  const searchString = event.target.value;
+  products
+    .filter(
+      (el) =>
+        el.title.includes(searchString) || el.description.includes(searchString)
+    )
+    .map((el) => productGroup.append(createCard(el)));
 };
